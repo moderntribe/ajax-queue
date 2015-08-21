@@ -40,7 +40,7 @@ class QueueHandler {
 
 			// Simulate the POST request
 			// ToDo: Make sure this is valid regarding the PHP config
-			$_POST = $request['opts'];
+			$_POST = ! empty( $request['opts'] ) ? $request['opts'] : [ ];
 
 			ob_start();
 
