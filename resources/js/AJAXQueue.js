@@ -33,7 +33,7 @@ var AJAXQueue = {
      * Executes a single AJAX call for all the calls added to the queue.
      * Unless you pass keep=true the queue will be emptied.
      */
-    queue.execute = function (keep) {
+    queue.run = function (keep) {
         if (queue.is_empty()) {
             return;
         }
