@@ -9,7 +9,7 @@ More documentation coming soon (isn't it always?), but this is how it works:
 ## On the JavaScript side
 
 ```JavaScript
-AJAXQueue.add(action, params, callback );
+AJAXQueue.add(action, params, callback);
 ````
 
 Where:
