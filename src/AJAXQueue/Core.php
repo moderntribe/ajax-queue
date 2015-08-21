@@ -44,15 +44,6 @@ class Core {
 		self::$queue_handler = new QueueHandler( $action );
 		self::$resources     = new Resources( $action );
 
-
-		add_action( 'wp_ajax_action_with_error', function () {
-			wp_send_json_error( [ 'message' => md5( time() ) ] );
-		} );
-
-		add_action( 'wp_ajax_action_with_ok', function () {
-			wp_send_json_success( [ 'message' => rand() ] );
-		} );
 	}
-
 
 }
