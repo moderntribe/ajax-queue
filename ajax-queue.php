@@ -3,7 +3,7 @@
 Plugin Name:	AJAX Queue
 Description:	Group AJAX calls
 Author:		    Modern Tribe
-Version:	    1.0.0
+Version:	    1.0.1
 Author URI:	    http://www.tri.be
 */
 
