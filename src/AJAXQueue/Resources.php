@@ -23,7 +23,15 @@ class Resources {
 	 */
 	public function __construct( $action ) {
 		$this->action = $action;
-		add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
+		$this->enqueue_scripts();
+	}
+
+	public function enqueue_scripts() {
+		$ajaxq_public = apply_filters( 'ajaxq-public', true );
+		$ajaxq_admin  = apply_filters( 'ajaxq-admin', false );
+
+		if( $ajaxq_public ) add_action( 'wp_enqueue_scripts', [ $this, 'enqueue' ] );
+		if( $ajaxq_admin ) add_action( 'admin_enqueue_scripts', [ $this, 'enqueue' ] );
 	}
 
 	/**
